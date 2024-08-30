@@ -163,16 +163,18 @@ const { title, navless } = Astro.props;
 
 <style is:global>
   :root {
-    --color-dark: #181225;
+    --color-bg: #080e17;
+    --color-light-bg: #16212d;
+    --color-primary: #2ad870;
+    --color-secondary: #9e86ff;
+
     --color-muted: #ccc;
-    --color-purple: #9e86ff;
     --color-pink: #ff70bc;
     --color-yellow: #ffd00e;
-    --color-green: #2dde74;
   }
   html {
     font-family: Libre Franklin, system-ui, sans-serif;
-    background-color: var(--color-dark);
+    background-color: var(--color-bg);
     color: white;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -180,14 +182,14 @@ const { title, navless } = Astro.props;
   }
   code {
     font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
+      Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
       monospace;
+  }
+  a {
+    color: var(--color-primary);
+    &:hover {
+      color: var(--color-secondary);
+    }
   }
   .container {
     margin: auto;
